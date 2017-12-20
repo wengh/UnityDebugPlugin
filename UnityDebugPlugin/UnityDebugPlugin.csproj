@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54A902B0-8411-4B39-8BB4-8E1C83F3F4D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityDebugPlugin</RootNamespace>
+    <AssemblyName>UnityDebugPlugin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PluginManager.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\PluginManager.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentEntry.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="ConfigurationEventArgs.cs" />
+    <Compile Include="HierarchyEntry.cs" />
+    <Compile Include="HierarchyPanel.cs" />
+    <Compile Include="InspectorPanel.cs" />
+    <Compile Include="Key.cs" />
+    <Compile Include="Keybindings.cs" />
+    <Compile Include="MemberValue.cs" />
+    <Compile Include="ObjectExplorer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleJSON.cs" />
+    <Compile Include="SingleInstance.cs" />
+    <Compile Include="UI\Buttons.cs" />
+    <Compile Include="UI\Colors.cs" />
+    <Compile Include="UI\Elements.cs" />
+    <Compile Include="UI\InputFields.cs" />
+    <Compile Include="UI\Labels.cs" />
+    <Compile Include="UI\ModGUI.cs" />
+    <Compile Include="UI\Scrollview.cs" />
+    <Compile Include="UI\Settings.cs" />
+    <Compile Include="UI\Sliders.cs" />
+    <Compile Include="UI\Toggle.cs" />
+    <Compile Include="UI\Tools.cs" />
+    <Compile Include="UI\Windows.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PluginManager.Core.dll" />
+    <Content Include="Resources\UI\arrow-disabled-down.png" />
+    <Content Include="Resources\UI\arrow-disabled-right.png" />
+    <Content Include="Resources\UI\arrow-hover-down.png" />
+    <Content Include="Resources\UI\arrow-hover-right.png" />
+    <Content Include="Resources\UI\arrow-normal-down.png" />
+    <Content Include="Resources\UI\arrow-normal-right.png" />
+    <Content Include="Resources\UI\background-44px.png" />
+    <Content Include="Resources\UI\background-dark.png" />
+    <Content Include="Resources\UI\blue-dark.png" />
+    <Content Include="Resources\UI\blue-light.png" />
+    <Content Include="Resources\UI\blue-normal.png" />
+    <Content Include="Resources\UI\blue-very-dark.png" />
+    <Content Include="Resources\UI\button-light-grey.png" />
+    <Content Include="Resources\UI\button-red.png" />
+    <Content Include="Resources\UI\scroll-horizontal.png" />
+    <Content Include="Resources\UI\scroll-thumb-active.png" />
+    <Content Include="Resources\UI\scroll-thumb-hover.png" />
+    <Content Include="Resources\UI\scroll-thumb.png" />
+    <Content Include="Resources\UI\scroll-vertical.png" />
+    <Content Include="Resources\UI\slider-thumb-active.png" />
+    <Content Include="Resources\UI\slider-thumb-hover.png" />
+    <Content Include="Resources\UI\slider-thumb.png" />
+    <Content Include="Resources\UI\thumb-horizontal.png" />
+    <Content Include="Resources\UI\thumb-vertical.png" />
+    <Content Include="Resources\UI\toggle-active.png" />
+    <Content Include="Resources\UI\toggle-hover.png" />
+    <Content Include="Resources\UI\toggle-normal.png" />
+    <Content Include="Resources\UI\toggle-on-active.png" />
+    <Content Include="Resources\UI\toggle-on-hover.png" />
+    <Content Include="Resources\UI\toggle-on-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\ArrowTemplate.psd" />
+    <None Include="Resources\UI\ButtonTemplate.psd" />
+    <None Include="Resources\UI\toggle.xcf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
